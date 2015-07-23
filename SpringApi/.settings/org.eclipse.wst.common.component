@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="SpringApi">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="jackson-mapper-asl-1.9.13.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/spring/New folder/jackson-mapper-asl-1.9.13.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-jaxrs-1.9.13.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/spring/New folder/jackson-jaxrs-1.9.13.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-core-2.5.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/spring/New folder/jackson-core-2.5.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-web-4.1.4.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/spring/spring-web-4.1.4.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-expression-4.1.4.RELEASE (2).jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/spring/spring-expression-4.1.4.RELEASE (2).jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="postgresql-9.3-1102.jdbc41.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/spring/postgres-driver/postgresql-9.3-1102.jdbc41.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-beans-4.1.4.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/spring/spring-beans-4.1.4.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-context-4.1.4.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/spring/spring-context-4.1.4.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-core-4.1.4.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/spring/spring-core-4.1.4.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-databind-2.5.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/spring/New folder/jackson-databind-2.5.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-tx-4.1.4.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/spring/spring-tx-4.1.4.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-logging-1.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/spring/commons-logging-1.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-aop-4.1.4.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/spring/spring-aop-4.1.4.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-webmvc-4.1.4.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/spring/spring-webmvc-4.1.4.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jstl-1.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/spring/jstl-1.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-jdbc-4.1.4.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/spring/spring-jdbc-4.1.4.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-annotations-2.5.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/spring/New folder/jackson-annotations-2.5.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-core-asl-1.9.13.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/spring/New folder/jackson-core-asl-1.9.13.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="SpringApi"/>
+        <property name="java-output-path" value="/SpringApi/build/classes"/>
+    </wb-module>
+</project-modules>

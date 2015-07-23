@@ -1,0 +1,66 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:security="http://www.springframework.org/schema/security"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+      http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+      http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
+     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd ">
+    <!-- bean definitions here -->
+   
+      
+    
+    <!--Spring security-->
+    
+    <!-- this goes to program and finds whose permission allowed -->
+    <security:http auto-config="true" use-expressions="true"> <!-- for allowing taglibrary we use this "use-expression" -->
+    
+    <!-- Root is always allowed anonymous.. no login needed -->
+    
+    <security:intercept-url pattern="/" access="permitAll()"/>
+    <security:intercept-url pattern="/login" access="permitAll()"/>
+    
+    <!-- everything else should be authenticated -->
+    <security:intercept-url pattern="/**" access="isAuthenticated()"/>
+    <!-- details about login page -->
+    <security:form-login login-page="/login" 
+    password-parameter="password" 
+    username-parameter="username"
+    default-target-url="/"
+    authentication-failure-url="/login?error=403"/>
+    
+    <!-- if we want to write any logout of our own we can write logout in place of logout-url -->
+    <security:logout logout-success-url="/"/>
+    </security:http>
+    
+    
+    
+    
+    <security:authentication-manager>
+    
+    <!-- we can have as many authentication providers , so spring looks up one by one until it finds or doesnot find -->
+    <security:authentication-provider>
+    
+    <security:user-service>
+    <security:user name="user" password="1234" authorities="ROLE_USER"/>
+    <security:user name="admin" password="1234" authorities="ROLE_ADMIN"/>
+    </security:user-service>
+    
+    </security:authentication-provider>
+    
+    <security:authentication-provider>
+    <security:user-service>
+    <security:user name="dashboard" password="1234"  authorities="ROLE_DASHBOARD"/>
+    </security:user-service>
+    </security:authentication-provider>
+    
+    </security:authentication-manager>
+   
+    
+    </beans>    
+    
+    
+    

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="ISO-8859-1">
+<title>weatherreport</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+
+<script src="weather.js"></script>
+<style> body  { background-color:linen }</style>
+</head>
+<body>
+<div class="container" ng-app="prudhviapp" ng-controller="cvccontroller"><br></br>
+<form>Enter the zipcode for weather information</form>
+<br></br>
+<div class="row">
+
+  <div class="col-lg-4">
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button style="color:blue" class="btn btn-default" type="button" ng-click="changeIt()" >search</button>
+      </span>
+      <input type="text" class="form-control" placeholder="enter zipcode" ng-model="zipcode">
+    </div><!-- /input-group -->
+    
+  </div><!-- /.col-lg-6 -->
+  </div><!-- /.row -->
+
+<br></br>
+
+ <div class="row">
+
+  <div class="col-sm-6 col-md-6" ng-repeat="zipcode in weathers">
+    <div class="thumbnail">
+      <img src="http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif" alt="...">
+      <div class="caption">
+      
+        <h4>Location :{{zipcode.query.results.channel.location}}</h4>
+        <h4>Temperature :{{zipcode.query.results.channel.units.temperature}} {{zipcode.query.results.channel.wind.chill}}</h4>
+        <p>{{zipcode.query.channel.item.condition.description}}</p>
+       
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+</body>
+</html>
